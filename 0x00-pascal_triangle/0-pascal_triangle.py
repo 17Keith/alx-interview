@@ -4,6 +4,7 @@
 
 
 def pascal_triangle(n):
+    """Function that prints a list of integers representing the pascal triangle"""
     row = []
     if n == 0:
         return row
