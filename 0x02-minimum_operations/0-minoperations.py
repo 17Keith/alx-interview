@@ -3,7 +3,7 @@
 
 
 def minOperations(n):
-    """ Function that checks the minimum operations in a file 
+    """ Function that checks the minimum operations in a file
     Returns: An integer of 0 if impossible"""
 
     pasted = 1  # chars present in the file
