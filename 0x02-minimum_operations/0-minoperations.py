@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 
-""" Minimum operations """
+""" Minimum operations of Copy and Paste """
 
 
 def minOperations(n):
-    """ Function that checks the minimum operations in a file """
-    pasted = 1
+    """ Function that checks the minimum operations in a file 
+    Returns: An integer of 0 if impossible"""
+
+    pasted = 1  # Characters that are present in a file
     copied = 0
-    operations = 0
+    operations = 0  # Counter
 
     while pasted < n:
+        # the copy operation
         if copied == 0:
             copied = pasted
             operations += 1
@@ -19,7 +22,7 @@ def minOperations(n):
             operations += 1
             continue
 
-        rem = n - pasted
+        rem = n - pasted  # remaining to be pasted
         if rem < copied:
             return 0
 
