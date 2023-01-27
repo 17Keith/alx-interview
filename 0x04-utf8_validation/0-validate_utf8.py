@@ -6,7 +6,7 @@
 def validUTF8(data):
     """ A method that determines if a given data set \
         represents a valid UTF-8 encoding. """
-    
+
     number_bytes = 0
 
     for i in data:
