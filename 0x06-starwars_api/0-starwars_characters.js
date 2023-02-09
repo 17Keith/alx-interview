@@ -8,7 +8,7 @@ const names = [];
 let people = [];
 
 
-// getting the characters function, and if there is an error, show the status code. 
+// getting the characters function, and if there is an error, show the status code.
 const requestCharacters = async () => {
     await new Promise(resolve => request(movieEndPoint, (err, res, body) => {
         if (err || res.statusCode !== 200) {
