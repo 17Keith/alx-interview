@@ -2,31 +2,19 @@
 
 """Given an n x n 2D matrix, rotate it 90 degrees clockwise."""
 
+
 def rotate_2d_matrix(matrix):
     """Function to rotate a matrix 90degs"""
+    left, right = 0, len(matrix) - 1
 
-    transposed = []
-    for row in zip(*matrix):
-        transposed.append(list(row))
-    rotated = []
-    for row in transposed:
-        rotated.append(row[::-1])
-     
-rows = int(input('Enter number of rows: '))
-cols  = int(input('Enter number of column: '))
+    while left < right:
+        for i in range(right - left):
+            top, bottom = left, right
+            topLeft = matrix[top][left + i]
+            matrix[top][left + i] = matrix[bottom - i][left]
+            matrix[bottom - i][left] = matrix[bottom][right - i]
+            matrix[bottom][right - i] = matrix[top + i][right]
+            matrix[top + i][right] = topLeft
 
-matrix = [[int(input(f"column {j+1} -> ENter {i+1} element:")) for j in range(cols)] for i in range(rows) ] 
-
-print()
-print('Given matrix :')
-
-for row in matrix:
-    print(row)
-
-rotate_90 = rotate_2d_matrix(matrix)
-
-print()
-print('Matrix after rotated by 90 degree')
-
-for row in rotate_90:
-    print(row)
+        right -= 1
+        left += 1
