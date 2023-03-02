@@ -1,11 +1,10 @@
 #!/usr/bin/python3
+''' Island Perimeter '''
 
-"""island perimeter"""
 
 def island_perimeter(grid):
-"""Returns the perimeter of the island described in grid"""
-
-   counter = 0
+    '''Returns the perimeter of the island described in grid'''
+    counter = 0
     grid_max = len(grid) - 1  # index of the last list in the grid
     lst_max = len(grid[0]) - 1  # index of the last square in list
 
