@@ -13,12 +13,12 @@ def isWinner(x, nums):
         if roundWinner is not None:
             winnerCounter[roundWinner] += 1
 
-        if winnerCounter['Maria'] > winnerCounter['Ben']:
-            return 'Maria'
-        elif winnerCounter['Ben'] > winnerCounter['Maria']:
-            return 'Ben'
-        else:
-            return None
+    if winnerCounter['Maria'] > winnerCounter['Ben']:
+        return 'Maria'
+    elif winnerCounter['Ben'] > winnerCounter['Maria']:
+        return 'Ben'
+    else:
+        return None
 
 
 def isRoundWinner(n, x):
@@ -58,4 +58,5 @@ def isPrime(n):
     else:
         for i in range(3, int(n**(1/2))+1, 2):
             if n % i == 0:
-                return "Not a Prime"
+                return "Not prime"
+        return True 
